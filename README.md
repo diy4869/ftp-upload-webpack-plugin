@@ -1,5 +1,5 @@
 # ftp-upload-webpack-plugin
-
+![npm](https://img.shields.io/npm/v/ftp-upload-webpack-plugin)
 ## 安装
 ```
 npm i ftp-upload-webpack-plugin -D

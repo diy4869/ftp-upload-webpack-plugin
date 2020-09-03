@@ -1,6 +1,6 @@
 {
   "name": "ftp-upload-webpack-plugin",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "",
   "main": "./src/index.js",
   "scripts": {
@@ -9,6 +9,10 @@
   "types": "./src/index.d.ts",
   "author": "last order",
   "license": "MIT",
+  "homepage": "https://github.com/diy4869/ftp-upload-webpack-plugin",
+  "bugs": {
+    "url": "https://github.com/diy4869/ftp-upload-webpack-plugin/issues"
+  },
   "dependencies": {
     "ftp": "^0.3.10",
     "ora": "^5.0.0"
