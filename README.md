@@ -15,7 +15,8 @@ interface FTPUploadWebpackPluginOptions {
     user: string,
     password: string,
     copyPath: string,
-    uploadPath: string
+    uploadPath: string,
+    cover?: boolean
 }
 
 new FTPUploadWebpackPlugin(options: FTPUploadWebpackPluginOptions)
@@ -31,4 +32,5 @@ user| 用户名 | 是
 password | 密码 | 是
 copyPath | 本地路径 | 是
 uploadPath | 需要上传的ftp路径 | 是
+cover | 是否覆盖上传 | 否
 
