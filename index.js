@@ -82,7 +82,6 @@ class FTPUploadWebpackPlugin {
           if (!some) {
             const from = path.resolve(fromPath, item)
             const to = `${toPath}/${item}`
-            console.log(from, to)
             upload(from, to)
             resolve(true)
           }
