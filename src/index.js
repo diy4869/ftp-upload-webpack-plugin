@@ -14,7 +14,9 @@ class FTPUploadWebpackPlugin {
       this.client.on('ready', async () => {
         const spinner = ora('正在努力上传中....').start()
         await this.readFtpDir(this.options.uploadPath)
-        await this.upload(this.options.copyPath, this.options.uploadPath)
+        this.upload(this.options.copyPath, this.options.uploadPath).then(res => {
+          res ? spinner.succeed('上传成功') : spinner.succeed('文件已存在')
+        })
         spinner.succeed('上传成功')
         this.client.end()
       })
@@ -84,6 +86,8 @@ class FTPUploadWebpackPlugin {
             const to = `${toPath}/${item}`
             upload(from, to)
             resolve(true)
+          } else {
+            resolve(false)
           }
         }
       })
