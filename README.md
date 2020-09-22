@@ -19,7 +19,7 @@ interface FTPUploadWebpackPluginOptions {
     cover?: boolean
 }
 
-const FTPUploadWebpackPlugin = require('ftp-upload-webpack-plugin)
+const FTPUploadWebpackPlugin = require('ftp-upload-webpack-plugin')
 
 new FTPUploadWebpackPlugin(options: FTPUploadWebpackPluginOptions)
 

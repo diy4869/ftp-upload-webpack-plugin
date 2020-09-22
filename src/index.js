@@ -10,7 +10,7 @@ class FTPUploadWebpackPlugin {
   }
 
   apply (compiler) {
-    compiler.plugin('done', () => {
+    compiler.hooks.done.tap('FTPUploadWebpackPlugin', () => {
       this.client.on('ready', async () => {
         const spinner = ora('正在努力上传中....').start()
         await this.readFtpDir(this.options.uploadPath)
